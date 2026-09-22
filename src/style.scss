@@ -1,0 +1,63 @@
+// ==========================================================================
+// 1. BOOTSTRAP FONKSİYONLARI
+// ==========================================================================
+@import "bootstrap/scss/functions";
+
+// ==========================================================================
+// 2. ÖZEL TEMA DEĞİŞKENLERİ
+// ==========================================================================
+$primary:       #d4af37; 
+$dark:          #121214; 
+$body-bg:       #1a1a1e; 
+$body-color:    #f3f4f6; 
+$card-bg:       #222227; 
+$card-color:    #ffffff;
+$card-border-color: rgba(255, 255, 255, 0.08);
+
+// ==========================================================================
+// 3. ÇEKİRDEK BOOTSTRAP DOSYALARI
+// ==========================================================================
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// ==========================================================================
+// 4. RESPONSIVE REBOOT & GRID MODÜLLERİ (Zorunlu)
+// ==========================================================================
+@import "bootstrap/scss/reboot";      
+@import "bootstrap/scss/type";        
+@import "bootstrap/scss/containers";  
+@import "bootstrap/scss/grid";        
+@import "bootstrap/scss/navbar";      
+@import "bootstrap/scss/buttons";     
+@import "bootstrap/scss/card";        
+@import "bootstrap/scss/badge";       
+@import "bootstrap/scss/utilities";   
+
+// ==========================================================================
+// 5. UTILITIES API (Tüm ekran boyutları için sınıfları üretir)
+// ==========================================================================
+@import "bootstrap/scss/utilities/api";
+
+// ==========================================================================
+// 6. ÖZEL SİTE CSS / TASARIM AYARLARI
+// ==========================================================================
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.custom-hero {
+  background: linear-gradient(135deg, #222227 0%, #121214 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+// Mobilde açılır pencerenin (modal) ekrana tam sığması için responsive ayar
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0.5rem;
+    width: calc(100% - 1rem) !important;
+  }
+}
